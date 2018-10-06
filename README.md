@@ -11,7 +11,7 @@
 
 ## Overview
 
-Most common tools for developing different Android / Java Client applications. Source will contains libraries location, small description, benefits and some explanation, why you should choose one over another. It's also acceptable to have some common part of code, for it's implementation. Feel free to add your own Pull-Request. Cheers!
+Most common tools for developing different Android / Java applications. Source will contains libraries location, small description, benefits and some explanation, why you should choose one over another. It's also acceptable to have some common part of code, for it's implementation. Feel free to add your own Pull-Request. Cheers!
 
 
 
@@ -19,8 +19,27 @@ Most common tools for developing different Android / Java Client applications. S
 
 ### Networking
 
- * [[OkHttp|Using OkHttp]] - Square's underlying networking library. Sync and Asynchronous requests. Setting custom serealization. Supports Interceps, WebSockets, and more. 
- * [[Retrofit](Consuming-APIs-with-Retrofit)] - A type-safe REST client for Android which intelligently maps an API into a client interface using annotations. Very powerfull tools built over previous OkHttp. 
+ * [[OkHttp](http://square.github.io/okhttp/)] - Square's underlying networking library. Sync and Asynchronous requests. Setting custom serealization. Supports Interceps, WebSockets, and more. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Using-OkHttp)]
+ 
+ * [[Retrofit](https://square.github.io/retrofit/)] - A type-safe REST client for Android which intelligently maps an API into a client interface using annotations. Very powerfull tools built over previous OkHttp. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Consuming-APIs-with-Retrofit)]
+
+
+### Testing
+
+ * [[Espresso](https://developer.android.com/training/testing/espresso/)] - Espresso is a UI test framework (part of the Android Testing Support Library) that allows you to create automated UI tests for your Android app. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/UI-Testing-with-Espresso)] 
+ 
+ * [[Robolectric](http://robolectric.org/)] - Efficient unit testing for Android. Robolectric is a unit testing framework that allows Android applications to be tested on the JVM without an emulator or device. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Unit-Testing-with-Robolectric)]
+ 
+ * [[LeakCanary](https://github.com/square/leakcanary)] - A memory leak detection library for Android and Java. “A small leak will sink a great ship.” - Benjamin Franklin 
+
+ 
+### Images Loading / Preprocessing
+
+ * [[Glide](https://github.com/bumptech/glide)] - Glide is an Image Loader Library for Android developed by bumptech and is a library that is recommended by Google. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Displaying-Images-with-the-Glide-Library)]
+ 
+ * [[Fresko](https://frescolib.org/)] - Fresco’s image pipeline will load images from the network, local storage, or local resources. To save data and CPU, it has three levels of cache; two in memory and another in internal storage.
+ 
+ * [[UIL](https://github.com/nostra13/Android-Universal-Image-Loader)] - Android library #1 on GitHub. UIL aims to provide a powerful, flexible and highly customizable instrument for image loading, caching and displaying. It provides a lot of configuration options and good control over the image loading and caching process.
 
 
 
@@ -37,118 +56,8 @@ Most common tools for developing different Android / Java Client applications. S
 
 
 
-
-
-
-### Standard Pack
-
-This "standard pack" listed below are libraries that are quite popular, widely applicable and should probably be setup within most Android apps:
-
-| Name            | Description                                                 |  
-| ----            | ------------                                                |
-| [Retrofit](Consuming-APIs-with-Retrofit) | A type-safe REST client for Android which intelligently maps an API into a client interface using annotations. |
-| [Glide](Displaying-Images-with-the-Glide-Library) | A powerful image downloading and caching library for Android. |
-| [ButterKnife](Reducing-View-Boilerplate-with-Butterknife) | Using Java annotations, makes Android development better by simplifying common tasks. *Might Be replaced by Kotlin Synthetic Variables of [Kotlin Extensions](https://kotlinlang.org/docs/tutorials/android-plugin.html)* |
-| [Parceler](Using-Parceler) | Android Parcelable made easy through code generation |
-| [IcePick](https://github.com/frankiesardo/icepick) | Android Instance State made easy |
-| [LeakCanary](https://github.com/square/leakcanary) | Catch memory leaks in your apps | 
-| [Espresso](UI-Testing-with-Espresso) | Powerful DSL for Android integration testing |
-| [Robolectric](Unit-Testing-with-Robolectric) | Efficient unit testing for Android |
-
-
-### Advanced Pack
-
-The "advanced pack" listed below are additional libraries that are more advanced to use but are popular amongst some of the best Android teams. Note that these libraries may not be suitable for your first app. These advanced libraries include:
-
-| Name            | Description                                                 |  
-| ----            | ------------                                                |
-| [Dagger 2](Dependency-Injection-with-Dagger-2)  | A fast dependency injector for managing objects.           |
-| [RxJava](RxJava) | Develop fully reactive components for Android.       |
-| [EventBus](Communicating-with-an-Event-Bus) | Android event bus for easier component communication, *can be ommitted using Lambda variables of Kotlin*.             |
-| [AndroidAnnotations](https://github.com/excilys/androidannotations) | Powerful annotations to reduce boilerplate code. |
-| [Retrolambda](Lambda-Expressions) | Bringing lambda block support to Android. |
-
-Keep in mind that the combination of these libraries may not always play nicely with each other.  The following section highlights some of these issues.
-
-#### Parceler and IcePick
-
-Note that you cannot use IcePick at the current time to save state of Parceler objects. See [this GitHub issue](https://github.com/frankiesardo/icepick/pull/20) for more context on why they are incompatible. You will need to use explicitly Parcelable objects with IcePick. You may consider replacing Parceler with [AutoParcel](https://github.com/frankiesardo/auto-parcel) which works seamlessly with IcePick. 
-
-#### ButterKnife and Parceler
-
-Using the Butterknife library with the Parceler library causes multiple declarations of javax.annotation.processing.Processor.  In this case, you have to exclude this conflict in your `app/build.gradle` file:
-
-```gradle
-   packagingOptions {
-        exclude 'META-INF/services/javax.annotation.processing.Processor'  // butterknife
-    }
-```
-
-#### ButterKnife and Custom Views
-
-Often you may find that using ButterKnife or Dagger injections defined in your constructor prevent Android Studio to preview your Custom View layout.  You may see an error about needing `isEditMode()` defined.
-Essentially this method is used to enable your code to short-circuit before executing a section of code that might be used for run-time but cannot be executed within the preview window.
-
-```java
-  public ContentEditorView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-
-        LayoutInflater inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-        inflater.inflate(R.layout.view_custom, this, true);
-
-        // short circuit here inside the layout editor
-        if(isInEditMode()) {
-            return;
-        }
-
-        ButterKnife.bind(this);
-```
-
-### Convenience
-
- * [Dagger](http://square.github.io/dagger/) - A fast dependency injector for Android and Java.  See this [video intro](http://www.infoq.com/presentations/Dagger) from Square.
- * [Spork](http://spork.bytewelder.com/) - Spork is an annotation processing library to speed up development on your projects. It allows you to write less boilerplate code to make your code more readable and maintainable.
- * [AutoParcel](https://github.com/frankiesardo/auto-parcel) - Port of Google AutoValue for Android with Parcelable generation goodies.
- * [Hugo](https://github.com/JakeWharton/hugo) - Easier logging within your app
- * [Logger](https://github.com/orhanobut/logger) - Much cleaner and easier logcat trace messages
- * [AndroidAnnotations](https://github.com/excilys/androidannotations) - Framework that speeds up Android development. It takes care of the plumbing, and lets you concentrate on what's really important. By simplifying your code, it facilitates its maintenance
- * [Calligraphy](https://github.com/chrisjenx/Calligraphy) - Custom fonts made easy
- * [EasyFonts](https://github.com/vsvankhede/easyfonts) - Easy preloaded custom fonts in your app
- * [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations) - Common property animations made easy
- * [AboutLibraries](https://github.com/mikepenz/AboutLibraries) - Automatically generates an *About this app* section, with a list of used libraries 
- * [EasyDeviceInfo](https://github.com/nisrulz/easydeviceinfo) - Get device information in a super easy way
- * [Sensey](https://github.com/nisrulz/sensey) - Detecting gestures in a snap.
- * [OAuthLibGithub](https://github.com/geniushkg/github-oauth) - Easily add Authentication using Github API.
- * [Timber](https://github.com/JakeWharton/timber) - A logger with a small, extensible API which provides utility on top of Android's normal Log class.
- * [LoggingInterceptor](https://github.com/ihsanbal/LoggingInterceptor) - An OkHttp interceptor which pretty logs request and response data.
- * [PrivacyStreams](https://github.com/PrivacyStreams/PrivacyStreams) - Access and process various types of personal data in Android with an easy, uniform, and privacy-friendly API.
- * [Easylauncher](https://github.com/akaita/easylauncher-gradle-plugin) - Modify the launcher icon of each of your app-variants using simple gradle rules. Add ribbons of any color, overlay your own images, change the colors of the icon, ...
- * [PermissionHelper](https://github.com/pankaj89/PermissionHelper) - Simplify Runtime Permission Structure. Easy to use, Works on Pre-Marshmallow, Get Callback on exactly same place, Kotlin support with super easy way,  ...
-
-### Extensions 
-
- * [RxJava](https://github.com/ReactiveX/RxJava) - Reactive Extensions for the JVM
- * [EventBus](https://github.com/greenrobot/EventBus) - Android optimized event bus that simplifies communication between components.
- * [EventBus](https://github.com/SysdataItaliaSpA/UniversalEventBus) - An Android Event Bus Architecture 
- * [Tape](http://square.github.io/tape/) - Tape is a collection of queue-related classes for Android and Java
- * [Priority Job Queue](https://github.com/yigit/android-priority-jobqueue) - Easier background tasks
- * [ACRA](http://acra.ch/) - Crash reporting made easy and free. Check the [setup instructions](https://github.com/ACRA/acra/wiki/BasicSetup) and [open-source backend](https://github.com/ACRA/acralyzer).
-
-### Networking
-
- * [Retrofit](http://square.github.io/retrofit/) - A type-safe REST client for Android and Java which intelligently maps an API into a client interface using annotations. 
- * [Picasso](http://square.github.io/picasso/) - A powerful image downloading and caching library for Android.
- * [Ion](https://github.com/koush/ion) - Powerful asynchronous networking library. [Download](https://github.com/koush/ion#get-ion) as a jar here.
- * [Android Async HTTP](http://loopj.com/android-async-http/) - Asynchronous networking client for loading remote content such as JSON.
- * [Volley](http://developer.android.com/training/volley/index.html) - Google's HTTP library that makes networking for Android apps easier and most importantly, faster.
- * [[OkHttp|Using OkHttp]] - Square's underlying networking library with support for asynchronous requests.
- * [[Glide|Displaying-Images-with-the-Glide-Library]] - Picasso image loading alternative endorsed by Google 
- * [Android Universal Image Loader](https://github.com/nostra13/Android-Universal-Image-Loader) - Popular alternative for image loading that can replace Picasso or Glide.
- * [Fresco](http://frescolib.org/) - An image management library from Facebook.
- * [Fast Android Networking](https://github.com/amitshekhariitbhu/Fast-Android-Networking) -Fast Android Networking is a powerful library for doing any type of networking in Android applications which is made on top of OkHttp Networking Layer.
-
+# OTHER
+------------------------------
 
 ### ListView
 
@@ -250,14 +159,6 @@ Essentially this method is used to enable your code to short-circuit before exec
 * [ImageEffectFilter](https://github.com/mnafian/ImageEffectFilter) - Sample code for processing images.
 * [VidEffects](https://github.com/krazykira/VidEffects) - Apply manipulation effects to videos.
 
-### Scanning
-
- * [ZXing](https://github.com/zxing/zxing) - Barcode or QR scanner
- * [ZXing Android Embedded](https://github.com/journeyapps/zxing-android-embedded) - Alternative zxing scanner
- * [barcodescanner](https://github.com/dm77/barcodescanner) - Newer alternative
- * [CamView](https://github.com/LivotovLabs/CamView) - ZXing alternative
- * [android-quick-response-code](https://code.google.com/p/android-quick-response-code/) - Another alternative
-
 ### Persistence
 
  * [[ActiveAndroid|ActiveAndroid-Guide]] - Not very fast, but quite convenient and proven over time solution.
@@ -326,13 +227,3 @@ Check out the following resources for finding libraries:
 
 ## References
 
- * <http://www.vogella.com/tutorials/AndroidUsefulLibraries/article.html>
- * <http://actionbarsherlock.com/>
- * <http://nineoldandroids.com/>
- * <https://github.com/roboguice/roboguice/wiki>
- * <https://github.com/excilys/androidannotations/wiki>
- * <https://github.com/erikwt/PullToRefresh-ListView>
- * https://github.com/jfeinstein10/SlidingMenu
- * <http://square.github.io/picasso/>
- * <https://cloudrail.com/best-android-libraries-for-developers/>
- * <https://github.com/geniushkg/github-oauth>
