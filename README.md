@@ -11,7 +11,34 @@
 
 ## Overview
 
-Most common tools for developing different Client applications for Android / Java. Source will contains libraries location, small description, benefits and some explanation, why you should choose one over another. It's also acceptable to have some common part of code, for it's implementation. Feel free to add your own Pull-Request. Cheers!
+Most common tools for developing different Android / Java Client applications. Source will contains libraries location, small description, benefits and some explanation, why you should choose one over another. It's also acceptable to have some common part of code, for it's implementation. Feel free to add your own Pull-Request. Cheers!
+
+
+
+
+
+### Networking
+
+ * [[OkHttp|Using OkHttp]] - Square's underlying networking library. Sync and Asynchronous requests. Setting custom serealization. Supports Interceps, WebSockets, and more. 
+ * [[Retrofit](Consuming-APIs-with-Retrofit)] - A type-safe REST client for Android which intelligently maps an API into a client interface using annotations. Very powerfull tools built over previous OkHttp. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Standard Pack
 
@@ -27,6 +54,7 @@ This "standard pack" listed below are libraries that are quite popular, widely a
 | [LeakCanary](https://github.com/square/leakcanary) | Catch memory leaks in your apps | 
 | [Espresso](UI-Testing-with-Espresso) | Powerful DSL for Android integration testing |
 | [Robolectric](Unit-Testing-with-Robolectric) | Efficient unit testing for Android |
+
 
 ### Advanced Pack
 
