@@ -7,6 +7,19 @@ Most common tools for developing different Android / Java applications. Source w
 
 
 
+### Android Common
+
+#### Architecture Components
+
+ * [[Room](https://developer.android.com/topic/libraries/architecture/room)] - The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite. Sample Impl - [[Github](https://github.com/anitaa1990/RoomDb-Sample)]
+ 
+ * [[Live Data](https://developer.android.com/topic/libraries/architecture/livedata)] - LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. Sample Impl - [[Github](https://github.com/anitaa1990/GameOfThronesTrivia)]
+
+ * [[ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)] - The ViewModel class is designed to store and manage UI-related data in a lifecycle conscious way. The ViewModel class allows data to survive configuration changes such as screen rotations. Sample Impl - [[Github](https://github.com/anitaa1990/GameOfThronesTrivia)]
+ 
+ * [[Data Binding](https://developer.android.com/topic/libraries/data-binding/)] - The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically. Sample Impl - [[Github](https://github.com/anitaa1990/DataBindingExample)]
+ 
+ * [[Lifecycle-Aware ](https://developer.android.com/topic/libraries/architecture/lifecycle)] - Lifecycle-aware components perform actions in response to a change in the lifecycle status of another component, such as activities and fragments. 
 
 
 ### Networking
