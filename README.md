@@ -3,7 +3,7 @@
 
 ## Overview
 
-Most common tools for developing different Android / Java applications. Source will contains libraries location, small description, benefits and some explanation, why you should choose one over another. It's also acceptable to have some common part of code, for it's implementation. Feel free to add your own Pull-Request. Cheers!
+Most common tools for creating Android / Java applications. Source will contains libraries location, small description, benefits and some explanation, why you should choose one over another. 
 
 
 
@@ -51,7 +51,7 @@ Most common tools for developing different Android / Java applications. Source w
 
 ### Persistence
 
- * [[ActiveAndroid]()] - Not very fast, but quite convenient and proven over time solution. Using the ActiveAndroid ORM makes managing client-side models extremely easy in simple cases. For more advanced or custom cases, you can use SQLiteOpenHelper to manage the database communication directly. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/ActiveAndroid-Guide)] 
+ * [[ActiveAndroid](http://www.activeandroid.com/)] - Not very fast, but quite convenient and proven over time solution. Using the ActiveAndroid ORM makes managing client-side models extremely easy in simple cases. For more advanced or custom cases, you can use SQLiteOpenHelper to manage the database communication directly. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/ActiveAndroid-Guide)] 
  
  * [[greenDAO](https://github.com/greenrobot/greenDAO)] - It is flexible and convenient to use one-to-many communication, but very unpleasant code generation, as a result of which your classes will be filled with a bunch of methods and comments. In addition, you need to connect the Gradle plug-in, which greatly increases the build time.
  
@@ -65,7 +65,7 @@ Most common tools for developing different Android / Java applications. Source w
 
 Check out the following resources for finding libraries:
 
- * [Android Codepath] (https://github.com/codepath/android_guides/wiki/Must-Have-Libraries#advanced-pack)
+ * [Android Codepath](https://github.com/codepath/android_guides/wiki/Must-Have-Libraries#advanced-pack)
  * [Android Aresenal](http://android-arsenal.com)
  * [Wasabeef Core Libraries](https://github.com/wasabeef/awesome-android-libraries)
  * [Wasabeef UI Libraries](https://github.com/wasabeef/awesome-android-ui)
