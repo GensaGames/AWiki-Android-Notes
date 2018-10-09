@@ -13,13 +13,15 @@ Most common tools for creating Android / Java applications. Source will contains
 
  * [[Room](https://developer.android.com/topic/libraries/architecture/room)] - The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite. Sample Impl - [[Github](https://github.com/anitaa1990/RoomDb-Sample)]
  
- * [[Live Data](https://developer.android.com/topic/libraries/architecture/livedata)] - LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. Sample Impl - [[Github](https://github.com/anitaa1990/GameOfThronesTrivia)]
+ * [[LiveData](https://developer.android.com/topic/libraries/architecture/livedata)] - LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. Sample Impl - [[Github](https://github.com/anitaa1990/GameOfThronesTrivia)]
 
  * [[ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)] - The ViewModel class is designed to store and manage UI-related data in a lifecycle conscious way. The ViewModel class allows data to survive configuration changes such as screen rotations. Sample Impl - [[Github](https://github.com/anitaa1990/GameOfThronesTrivia)]
  
  * [[Data Binding](https://developer.android.com/topic/libraries/data-binding/)] - The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically. Sample Impl - [[Github](https://github.com/anitaa1990/DataBindingExample)]
  
- * [[Lifecycle-Aware ](https://developer.android.com/topic/libraries/architecture/lifecycle)] - Lifecycle-aware components perform actions in response to a change in the lifecycle status of another component, such as activities and fragments. 
+ * [[LifecycleAware ](https://developer.android.com/topic/libraries/architecture/lifecycle)] - Lifecycle-aware components perform actions in response to a change in the lifecycle status of another component, such as activities and fragments. 
+ 
+ * [[WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager/)] - The WorkManager API makes it easy to specify deferrable, asynchronous tasks and when they should run. These APIs let you create a task and hand it off to WorkManager to run immediately or at an appropriate time.
 
 
 ### Networking
@@ -32,6 +34,10 @@ Most common tools for creating Android / Java applications. Source will contains
 ### Testing
 
  * [[Espresso](https://developer.android.com/training/testing/espresso/)] - Espresso is a UI test framework (part of the Android Testing Support Library) that allows you to create automated UI tests for your Android app. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/UI-Testing-with-Espresso)] 
+ 
+ * [[Mockito](https://site.mockito.org/)] - Mockito is a mocking framework that tastes really good. It lets you write beautiful tests with a clean & simple API. Mockito doesn’t give you hangover because the tests are very readable and they produce clean verification errors.
+ 
+ * [[PowerMock](https://github.com/powermock/powermock)] - Writing unit tests can be hard and sometimes good design has to be sacrificed for the sole purpose of testability. Often testability corresponds to good design, but this is not always the case. For example final classes and methods cannot be used, private methods sometimes need to be protected or unnecessarily moved to a collaborator, static methods should be avoided completely and so on simply because of the limitations of existing frameworks.
  
  * [[Robolectric](http://robolectric.org/)] - Efficient unit testing for Android. Robolectric is a unit testing framework that allows Android applications to be tested on the JVM without an emulator or device. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Unit-Testing-with-Robolectric)]
  
