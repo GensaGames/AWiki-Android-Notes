@@ -57,6 +57,14 @@ Most common tools for creating Android / Java applications. Source will contains
  
  * [[Room](https://developer.android.com/topic/libraries/architecture/room.html)] - An interesting solution presented on Google I / O 2017 as optimal for working with the database on Android OS. Despite the fact that it is necessary to use explicit sql-requests, the library turned out to be quite convenient and I liked it personally. 
 
+
+### 6. Logging
+
+ * [[SLF4J](https://github.com/qos-ch/slf4j)] - The Simple Logging Facade for Java (SLF4J) serves as a simple facade or abstraction for various logging frameworks (e.g. java.util.logging, logback, log4j) allowing the end user to plug in the desired logging framework at deployment time. 
+
+
+
+
 ## Resources
 
 Check out the following resources for finding libraries:
