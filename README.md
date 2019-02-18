@@ -7,18 +7,21 @@ Most common tools for creating Android / Java applications. Source will contains
 
 
 
-### - Google Jetpack & Common
+## Tools
+
+
+### 1. Google Jetpack & Common
 [Google Jetpack](https://github.com/codepath/android_guides/wiki/Using-OkHttp) is a collection of Android software components to make it easier for you to develop great Android apps. These components help you follow best practices, free you from writing boilerplate code, and simplify complex tasks, so you can focus on the code you care about. 
 
 
-### - Networking
+### 2. Networking
 
  * [[OkHttp](http://square.github.io/okhttp/)] - Square's underlying networking library. Sync and Asynchronous requests. Setting custom serealization. Supports Interceps, WebSockets, and more. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Using-OkHttp)]
  
  * [[Retrofit](https://square.github.io/retrofit/)] - A type-safe REST client for Android which intelligently maps an API into a client interface using annotations. Very powerfull tools built over previous OkHttp. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Consuming-APIs-with-Retrofit)]
 
 
-### - Testing
+### 3. Testing
 
  * [[Espresso](https://developer.android.com/training/testing/espresso/)] - Espresso is a UI test framework (part of the Android Testing Support Library) that allows you to create automated UI tests for your Android app. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/UI-Testing-with-Espresso)] 
  
@@ -31,7 +34,7 @@ Most common tools for creating Android / Java applications. Source will contains
  * [[LeakCanary](https://github.com/square/leakcanary)] - A memory leak detection library for Android and Java. “A small leak will sink a great ship.” - Benjamin Franklin 
 
  
-### - Images Loading / Preprocessing
+### 4. Images Loading / Preprocessing
 
  * [[Glide](https://github.com/bumptech/glide)] - Glide is an Image Loader Library for Android developed by bumptech and is a library that is recommended by Google. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Displaying-Images-with-the-Glide-Library)]
  
@@ -42,7 +45,7 @@ Most common tools for creating Android / Java applications. Source will contains
 
 
 
-### - Persistence
+### 5. Persistence
 
  * [[ActiveAndroid](http://www.activeandroid.com/)] - Not very fast, but quite convenient and proven over time solution. Using the ActiveAndroid ORM makes managing client-side models extremely easy in simple cases. For more advanced or custom cases, you can use SQLiteOpenHelper to manage the database communication directly. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/ActiveAndroid-Guide)] 
  
