@@ -7,31 +7,18 @@ Most common tools for creating Android / Java applications. Source will contains
 
 
 
-### Android Common
-
-#### Architecture Components
-
- * [[Room](https://developer.android.com/topic/libraries/architecture/room)] - The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite. Sample Impl - [[Github](https://github.com/anitaa1990/RoomDb-Sample)]
- 
- * [[LiveData](https://developer.android.com/topic/libraries/architecture/livedata)] - LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. Sample Impl - [[Github](https://github.com/anitaa1990/GameOfThronesTrivia)]
-
- * [[ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)] - The ViewModel class is designed to store and manage UI-related data in a lifecycle conscious way. The ViewModel class allows data to survive configuration changes such as screen rotations. Sample Impl - [[Github](https://github.com/anitaa1990/GameOfThronesTrivia)]
- 
- * [[Data Binding](https://developer.android.com/topic/libraries/data-binding/)] - The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically. Sample Impl - [[Github](https://github.com/anitaa1990/DataBindingExample)]
- 
- * [[LifecycleAware ](https://developer.android.com/topic/libraries/architecture/lifecycle)] - Lifecycle-aware components perform actions in response to a change in the lifecycle status of another component, such as activities and fragments. 
- 
- * [[WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager/)] - The WorkManager API makes it easy to specify deferrable, asynchronous tasks and when they should run. These APIs let you create a task and hand it off to WorkManager to run immediately or at an appropriate time.
+### - Google Jetpack & Common
+[Google Jetpack](https://github.com/codepath/android_guides/wiki/Using-OkHttp) is a collection of Android software components to make it easier for you to develop great Android apps. These components help you follow best practices, free you from writing boilerplate code, and simplify complex tasks, so you can focus on the code you care about. 
 
 
-### Networking
+### - Networking
 
  * [[OkHttp](http://square.github.io/okhttp/)] - Square's underlying networking library. Sync and Asynchronous requests. Setting custom serealization. Supports Interceps, WebSockets, and more. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Using-OkHttp)]
  
  * [[Retrofit](https://square.github.io/retrofit/)] - A type-safe REST client for Android which intelligently maps an API into a client interface using annotations. Very powerfull tools built over previous OkHttp. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Consuming-APIs-with-Retrofit)]
 
 
-### Testing
+### - Testing
 
  * [[Espresso](https://developer.android.com/training/testing/espresso/)] - Espresso is a UI test framework (part of the Android Testing Support Library) that allows you to create automated UI tests for your Android app. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/UI-Testing-with-Espresso)] 
  
@@ -44,7 +31,7 @@ Most common tools for creating Android / Java applications. Source will contains
  * [[LeakCanary](https://github.com/square/leakcanary)] - A memory leak detection library for Android and Java. “A small leak will sink a great ship.” - Benjamin Franklin 
 
  
-### Images Loading / Preprocessing
+### - Images Loading / Preprocessing
 
  * [[Glide](https://github.com/bumptech/glide)] - Glide is an Image Loader Library for Android developed by bumptech and is a library that is recommended by Google. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Displaying-Images-with-the-Glide-Library)]
  
@@ -55,7 +42,7 @@ Most common tools for creating Android / Java applications. Source will contains
 
 
 
-### Persistence
+### - Persistence
 
  * [[ActiveAndroid](http://www.activeandroid.com/)] - Not very fast, but quite convenient and proven over time solution. Using the ActiveAndroid ORM makes managing client-side models extremely easy in simple cases. For more advanced or custom cases, you can use SQLiteOpenHelper to manage the database communication directly. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/ActiveAndroid-Guide)] 
  
