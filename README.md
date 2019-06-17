@@ -5,16 +5,12 @@
 
 Most common tools for creating Android / Java applications. It's just local notes and mind maps for some fields and their quick navigation. See more below. 
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/GensaGames/AWiki-Android-Tools/master/images/Android.png" width="750" height="450" />
-</p>
-</br>
 
 
 ## Notes
 
 
-### 1. Google Jetpack & Common
+### Google Jetpack & Common
 * [Google Jetpack](https://developer.android.com/jetpack/) is a collection of Android software components to make it easier for you to develop great Android apps. These components help you follow best practices, free you from writing boilerplate code, and simplify complex tasks, so you can focus on the code you care about. 
 
 <p align="center">
@@ -23,14 +19,21 @@ Most common tools for creating Android / Java applications. It's just local note
 </br>
 
 
-### 2. Networking
+--------
+<p align="center">
+<img src="https://raw.githubusercontent.com/GensaGames/AWiki-Android-Tools/master/images/Android.png" width="750" height="450" />
+</p>
+</br>
+
+
+### 1. Networking
 
  * [[OkHttp](http://square.github.io/okhttp/)] - Square's underlying networking library. Sync and Asynchronous requests. Setting custom serealization. Supports Interceps, WebSockets, and more. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Using-OkHttp)]
  
  * [[Retrofit](https://square.github.io/retrofit/)] - A type-safe REST client for Android which intelligently maps an API into a client interface using annotations. Very powerfull tools built over previous OkHttp. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Consuming-APIs-with-Retrofit)]
 
 
-### 3. Testing
+### 2. Testing
 
  * [[Espresso](https://developer.android.com/training/testing/espresso/)] - Espresso is a UI test framework (part of the Android Testing Support Library) that allows you to create automated UI tests for your Android app. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/UI-Testing-with-Espresso)] 
  
@@ -43,7 +46,7 @@ Most common tools for creating Android / Java applications. It's just local note
  * [[LeakCanary](https://github.com/square/leakcanary)] - A memory leak detection library for Android and Java. “A small leak will sink a great ship.” - Benjamin Franklin 
 
  
-### 4. Images Loading / Preprocessing
+### 3. Images Loading / Preprocessing
 
  * [[Glide](https://github.com/bumptech/glide)] - Glide is an Image Loader Library for Android developed by bumptech and is a library that is recommended by Google. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/Displaying-Images-with-the-Glide-Library)]
  
@@ -54,7 +57,7 @@ Most common tools for creating Android / Java applications. It's just local note
 
 
 
-### 5. Persistence
+### 4. Persistence
 
  * [[ActiveAndroid](http://www.activeandroid.com/)] - Not very fast, but quite convenient and proven over time solution. Using the ActiveAndroid ORM makes managing client-side models extremely easy in simple cases. For more advanced or custom cases, you can use SQLiteOpenHelper to manage the database communication directly. Complete Guide - [[Codepath](https://github.com/codepath/android_guides/wiki/ActiveAndroid-Guide)] 
  
@@ -68,7 +71,7 @@ Most common tools for creating Android / Java applications. It's just local note
 
 
 
-### 6. Logging
+### 5. Logging
 
  * [[Timber](https://github.com/JakeWharton/timber)] - This is a logger with a small, extensible API which provides utility on top of Android's normal Log class. I copy this class into all the little apps I make. I'm tired of doing it. Now it's a library.
  
