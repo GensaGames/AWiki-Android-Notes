@@ -38,5 +38,4 @@ Most common tools for creating Android / Java applications. It's just local note
  * <http://www.libtastic.com>
  * [Android Libhunt](https://android.libhunt.com/)
 
-## References
 
