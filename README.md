@@ -34,8 +34,6 @@ Most common tools for creating Android / Java applications. It's just local note
  * [Wasabeef UI Libraries](https://github.com/wasabeef/awesome-android-ui)
  * [Ultimate Android Library Reference](https://github.com/aritraroy/UltimateAndroidReference/blob/master/README.md)
  * [Snowdream Android Library Repository](https://snowdream.github.io/awesome-android/)
- * <http://appdevwiki.com/wiki/show/HomePage>
- * <http://www.libtastic.com>
  * [Android Libhunt](https://android.libhunt.com/)
 
 
